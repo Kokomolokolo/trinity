@@ -63,7 +63,7 @@ fn main() -> io::Result<()> {
                     let Some(mv) = engine.find_best_move(&pos) else {
                         writeln!(out, "bestmove 0000")?; // Nichts gefunden
                         eprintln!("No best move found!");
-                        out.flush();
+                        out.flush()?;
                         continue;
                     };
 

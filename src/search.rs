@@ -8,3 +8,5 @@ pub fn search(
     let first_mv = pos.legal_moves().first().copied();
     first_mv
 }
+
+fn negamax()
