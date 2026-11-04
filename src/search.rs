@@ -45,6 +45,9 @@ fn alpha_beta(pos: &Chess, mut alpha: i32, mut beta: i32, depth: u8) -> i32 {
             return 0; // Patt
         }
     }
+    if pos.is_game_over() && !pos.is_checkmate() {
+        return 0; 
+    }
 
     if depth == 0 {
         return evaluate(pos); // Quisesecnte search hier noch einbauen
